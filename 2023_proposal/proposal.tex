@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.2 (2020-10-22)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
+
+\usepackage[english]{babel} % Specify a different language here - english by default
+\usepackage{tabularx}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+
+\newcommand{\aim}[2]{\textbf{Aim #1: #2}}
+\newcommand{\aimOne}{\aim{1}}
+\newcommand{\aimTwo}{\aim{2}}
+\newcommand{\aimThree}{\aim{3}}
+\newcommand{\aimFour}{\aim{4}}
+\newcommand{\aimFive}{\aim{5}}
+\newcommand{\GN}{{\textsc{GN}}}
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+
+\hypersetup{
+	hidelinks,
+	colorlinks,
+	breaklinks=true,
+	urlcolor=color2,
+	citecolor=color1,
+	linkcolor=color1,
+	bookmarksopen=false,
+	pdftitle={Title},
+	pdfauthor={Author},
+}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{Solomon GGI Archives, Vol. I, No. 1, 1-5, 2023} % Journal information
+\Archive{Supporting the Panorama Project} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{Postdoc Proposal} % Article title
+
+\Authors{Shelby Solomon Darnell\textsuperscript{1}} % Authors
+%\Authors{Shelby Solomon Darnell\textsuperscript{1}*, James Smith\textsuperscript{2}} % Authors
+\affiliation{\textsuperscript{1}\textit{Department of Genetics, Genomics and Informatics, UTHSC, Memphis, TN, United States of America}} % Author affiliation
+%\affiliation{\textsuperscript{2}\textit{Department of Chemistry, University of Examples, London, United Kingdom}} % Author affiliation
+\affiliation{*\textbf{Corresponding author}: shelby@shelbydarnell.com} % Corresponding author
+
+\Keywords{Affective Genomics --- Computational pangenomics --- bespoke computing architecture --- Adaptive Artificial systems --- Causal inference} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+%\Abstract{
+%	GeneNetwork is an advanced systems genetics platform quickly evolving into a flagship NIH genetic database in functionality, usefulness, usability, and accessibility. As a postdoc, with a broad computer science background, working with seasoned researchers in genetics, genomics and informatics (GGI) there are several areas that must be worked on to aide the advancement of \GN\ while preparing to be a principle research investigator in GGI. In order to achieve this goal I will build new and augment existing functionality into \GN\ while participating in learning activities to shore up knowledge of genetics and genomics. 
+%}
+
+\Abstract{
+	The Panorama project is an NSF funded large collaborative project that brings together computing hardware and software scientists and engineers to work on a bespoke hardware and software to better manage pangenomic computing. 
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Output the title and abstract box
+
+\tableofcontents % Output the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\input{sections/01-intro}
+
+%------------------------------------------------
+
+%\section{Appointment}
+%\input{sections/02-appointment}
+
+%------------------------------------------------
+
+\section{Strengths \& Weaknesses}\label{sec:weaknesses}
+
+\input{sections/03-strengthesweaknesses}
+
+%\begin{description}
+%	\item[Word] Definition
+%	\item[Concept] Explanation
+%	\item[Idea] Text
+%\end{description}
+
+%------------------------------------------------
+
+%\section{Background}\label{sec:background}
+
+%\input{sections/04-background}
+
+\section{Individual Development Plan}\label{sec:idp}
+\input{sections/05-idp2.tex}
+
+
+\phantomsection
+%\section*{Acknowledgments} % The \section*{} command stops section numbering
+
+\addcontentsline{toc}{section}{Acknowledgments} % Adds this section to the table of contents
+
+%So long and thanks for all the fish \cite{Figueredo:2009dg, Smith:2012qr}.
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\phantomsection
+\bibliographystyle{unsrt}
+\bibliography{proposal.bib}
+
+%----------------------------------------------------------------------------------------
+
+\appendix
+\section{Potential Courses}\label{sec:courses}
+\input{appendices/A1-courses-table}
+
+\end{document}

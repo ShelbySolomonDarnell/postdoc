@@ -1,0 +1,26 @@
+Privacy Preserving Pangenomes
+
+Privacy preserving sharing allows one to publicly share information about a dataset without sharing information that would allow an individuals personal information to be singularly identified.
+
+
+What is it?
+Explain the point of inclusivity
+    + building a globally inclusive pangenome
+Explain the strength of sharing
+    + sharing genomic information has major social benefits
+Explain Eriks method
+    + odgi: a command line analysis toolkit for pangenomics
+
+In order to improve access to pangenomes and the tools necessary to continue their study and understanding, preserving the privacy of those who share their genetic information is necessary and responsible.
+Therefore being able to share sequences of pangenomic cohorts without violating individual privacy guarantees is of utmost importance, and is the goal of the practical differential privacy of pangenomes project.
+Erik and his team have built an ogdi tool and added their algorithm privvg to it.
+They need to measure the strength of their approach, where they test different parameters of their modifications to the genome to ensure differential privacy.
+
+In establishing a method to share sequences from private cohorts publicly, we hope to spark the development of a universal human pangenome that can be built fully in the open using material that represents the group properties of cohorts which are otherwise impossible to access.
+Sequencing and analysis costs can be reduced dramatically if we compare the sequence reads to a reference genome, or pangenome (many genomes). A pangenome representing many individuals can show us the frequency of a given allele, which is critical in the analysis of rare genomic disease cases.
+
+There are significant practical benefits to data sharing. But, the standard in human genomics is to not share information, as the release of genomic information can pose a major privacy risk. Some sharing does occur, for instance, many medical cohorts are able to release summary statistics about SNPs, such as their frequency. Unfortunately, this is very limited information. We would rather know frequencies of the alleles of whole genes—the functional units of the genome—which may be 10-100Kbp. Furthermore, given that the cost to build a complete de novo assembly of a human genome is rapidly dropping [nurk2022], we see a need to develop a method that lets the privacy-preserving data release that provides access to the full sequence space of the pangenome, not just point mutations relative to a reference genome.
+%This sounds like an optimization problem where a change in parameters leads to a representation that can be tested for its goodness; hence, applying a computationally intelligent algorithm to the process will better determine the usefulness of modifying the parameters that are being changed.
+
+%Can we build a model that helps ensure differntial privacy in pangenomes?
+%A possible problem with mutating an individuals haplotypes is adding inconsistencies the the resulting data. Erik's group approaches mediating the issue by making a modification that is 

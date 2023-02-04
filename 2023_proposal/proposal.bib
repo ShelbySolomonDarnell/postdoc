@@ -1,5 +1,59 @@
 %This is an example bib file for NIH Grant template.
-i
+
+@inproceedings{umar2022,
+author = {Umar, Muhammad and Hua, Weizhe and Zhang, Zhiru and Suh, G. Edward},
+title = {SoftVN: Efficient Memory Protection via Software-Provided Version Numbers},
+year = {2022},
+isbn = {9781450386104},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3470496.3527378},
+doi = {10.1145/3470496.3527378},
+abstract = {Trusted execution environments (TEEs) in processors protect off-chip memory (DRAM), and ensure its confidentiality and integrity using memory encryption and integrity verification. However, such memory protection can incur significant performance overhead as it requires additional memory accesses for protection metadata such as version numbers (VNs) and MACs. This paper proposes SoftVN, an extension to the current memory protection schemes, which significantly reduces the overhead of today's state-of-the-art by allowing software to provide VNs for memory accesses. For memory-intensive applications with simple memory access patterns for large data structures, the VNs only need to be maintained for data structures instead of individual cache blocks and can be tracked in software with low efforts. Off-chip VN accesses for memory reads can be removed if they are tracked and provided by software. We evaluate SoftVN by simulating a diverse set of memory-intensive applications, including deep learning, graph processing, and bioinformatics algorithms. The experimental results show that SoftVN reduces the memory protection overhead by 82\% compared to the baseline similar to Intel SGX, and improves the performance by 33\% on average. The maximum performance improvement can be as high as 65\%.},
+booktitle = {Proceedings of the 49th Annual International Symposium on Computer Architecture},
+pages = {160–172},
+numpages = {13},
+keywords = {memory protection, trusted execution environment (TEE)},
+location = {New York, New York},
+series = {ISCA '22}
+}
+
+@inproceedings{hua2022mgx,
+author = {Hua, Weizhe and Umar, Muhammad and Zhang, Zhiru and Suh, G. Edward},
+title = {MGX: Near-Zero Overhead Memory Protection for Data-Intensive Accelerators},
+year = {2022},
+isbn = {9781450386104},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3470496.3527418},
+doi = {10.1145/3470496.3527418},
+abstract = {This paper introduces MGX, a near-zero overhead memory protection scheme for hardware accelerators. MGX minimizes the performance overhead of off-chip memory encryption and integrity verification by exploiting the application-specific properties of the accelerator execution. In particular, accelerators tend to explicitly manage data movement between on-chip and off-chip memories. Therefore, the general memory access pattern of an accelerator can largely be determined for a given application. Exploiting these characteristics, MGX generates version numbers used in memory encryption and integrity verification using on-chip accelerator state rather than storing them in the off-chip memory; it also customizes the granularity of the memory protection to match the granularity used by the accelerator. To demonstrate the efficacy of MGX, we present an in-depth study of MGX for DNN and graph algorithms. Experimental results show that on average, MGX lowers the performance overhead of memory protection from 28\% and 33\% to 4\% and 5\% for DNN and graph processing accelerators in a wide range of benchmarks, respectively.},
+booktitle = {Proceedings of the 49th Annual International Symposium on Computer Architecture},
+pages = {726–741},
+numpages = {16},
+keywords = {off-chip memory protection, secure accelerators, graph algorithms, version number generation, neural networks},
+location = {New York, New York},
+series = {ISCA '22}
+}
+
+@inproceedings{Xiang2022,
+author = {Xiang, Shaojie and Lai, Yi-Hsiang and Zhou, Yuan and Chen, Hongzheng and Zhang, Niansong and Pal, Debjit and Zhang, Zhiru},
+title = {HeteroFlow: An Accelerator Programming Model with Decoupled Data Placement for Software-Defined FPGAs},
+year = {2022},
+isbn = {9781450391498},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3490422.3502369},
+doi = {10.1145/3490422.3502369},
+abstract = {To achieve high performance with FPGA-equipped heterogeneous compute systems, it is crucial to co-optimize data placement and compute scheduling to maximize data reuse and bandwidth utilization for both on- and off-chip memory accesses. However, optimizing the data placement for FPGA accelerators is a complex task. One must acquire in-depth knowledge of the target FPGA device and its associated memory system in order to apply a set of advanced optimizations. Even with the latest high-level synthesis (HLS) tools, programmers often have to insert many low-level vendor-specific pragmas and substantially restructure the algorithmic code so that the right data are accessed at the right loop level using the right communication schemes. These code changes can significantly compromise the composability and portability of the original program. To address these challenges, we propose HeteroFlow, an FPGA accelerator programming model that decouples the algorithm specification from optimizations related to orchestrating the placement of data across a customized memory hierarchy. Specifically, we introduce a new primitive named .to(), which provides a unified programming interface for specifying data placement optimizations at different levels of granularity: (1) coarse-grained data placement between host and accelerator, (2) medium-grained kernel-level data placement within an accelerator, and (3) fine-grained data placement within a kernel. We build HeteroFlow on top of the open-source HeteroCL DSL and compilation framework. Experimental results on a set of realistic benchmarks show that, programs written in HeteroFlow can match the performance of extensively optimized manual HLS design with much fewer lines of code.},
+booktitle = {Proceedings of the 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+pages = {78–88},
+numpages = {11},
+keywords = {dsl, programming model, decoupled data placement},
+location = {Virtual Event, USA},
+series = {FPGA '22}
+}
+
 @article{WANG20222381,
 title    = {Distinctive functional regime of endogenous lncRNAs in dark regions of human genome},
 journal  = {Computational and Structural Biotechnology Journal},

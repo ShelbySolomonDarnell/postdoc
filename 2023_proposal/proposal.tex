@@ -140,7 +140,7 @@
 \input{sections/05-idp.tex}
 
 
-\phantomsection
+%\phantomsection
 %\section*{Acknowledgments} % The \section*{} command stops section numbering
 
 \addcontentsline{toc}{section}{Acknowledgments} % Adds this section to the table of contents
@@ -150,15 +150,16 @@
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
-
-\phantomsection
+%\phantomsection
+\newpage
 \bibliographystyle{unsrt}
 \bibliography{proposal.bib}
 
 %----------------------------------------------------------------------------------------
 
+\onecolumn
 \appendix
-\section{Potential Courses}\label{sec:courses}
+%\section{Potential Courses}\label{sec:courses}
 \input{appendices/A1-courses-table}
 
 \end{document}

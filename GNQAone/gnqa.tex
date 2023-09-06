@@ -1,0 +1,87 @@
+%File: formatting-instruction.tex
+\documentclass[letterpaper]{article}
+\usepackage{aaai}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{colortbl}
+%\usepackage[style=apa,autocite=footnote]{biblatex}
+\usepackage{comment}
+\usepackage{appendix}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{ {./imgs/} }
+
+\newcommand{\NIGMS}{\textsc{NIGMS}}
+\newcommand{\openai}{\textsc{OpenAI}}
+\newcommand{\project}{\textit{GeneNetwork.org Q\&A system}}
+\newcommand{\hl}[1]{#1}
+\newcommand{\GN}{{\textsc{GN}}}
+\newcommand{\lsRDF}{\LS{Wilkinson}}
+\newcommand{\red}[1]{{\textcolor{red}{#1}}}
+\newcommand{\cyan}[1]{{\textcolor{cyan}{#1}}}
+\newcommand{\violet}[1]{{\textcolor{violet}{#1}}}
+\newcommand{\brown}[1]{{\textcolor{brown}{#1}}}
+\newcommand{\FIXME}[1]{\red{[FIXME: #1]}}
+
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\pdfinfo{
+/Title (Insert Your Title Here)
+/Author (Put All Your Authors Here, Separated by Commas)}
+\setcounter{secnumdepth}{0}  
+ \begin{document}
+% The file aaai.sty is the style file for AAAI Press 
+% proceedings, working notes, and technical reports.
+%
+\title{Generative AI In the pursuit to moderate and expose\\ Genetic/Genomic Knowledge}
+\author{S. Solomon Darnell\\
+UTHSC Department of Genetics, Genomics and Informatics (GGI)\\
+71 S. Manassas Street, 4th Floor\\
+Memphis, Tennessee 38163\\
+e $->$ genetics@uthsc.edu, ssd2023@nyeusi.tech
+}
+\maketitle
+\begin{abstract}
+\begin{quote}
+The advent of popular and useful large text search and generative artificial intelligence (GAI) has led to the automation of many rote tasks and more amazingly multiple creative ones.
+Generative artificial intelligence is based off of expansive machine learning models which exploded in relevance around fifteen years ago as convolutional neural nets (CNNs) began outperforming other methods in image classification tasks.
+After a decade of wide-spanning, in research circles, development of deep learning networks (mostly underpinned by powerful convolutional neural networks) transformed into development of generative AI models.
+ChatGPT, the leader of the pack in generative AI, is a private company that has curated extremely large models comprised of many billions of parameters.
+The wild utility of generative AI models was made manifest to the world at large in late 2022, and what is following is a `mad dash' towards exploration, improvement, duplication and usage of generative AI systems. 
+The department of genetics, genomics and informatics at the University of Tennessee Health Sciences center is no different as we are building an expert system that uses generative AI to bring knowledge and insights to people regardless of their level of ability or scientific knowledge.
+\end{quote}
+\end{abstract}
+
+\input{01-intro}
+\input{02-related-works}
+\input{02a-llm-strengths}
+\input{02b-llm-weaknesses}
+\input{03-update_expertsystem}
+\input{04-gnqa-dev}
+\input{04a-epochone}
+\input{04b-oss-llm}
+\input{04c-oracles}
+
+\section{ Acknowledgments}
+Many thanks to the Kenyan startup `Fahamu AI' that helped us demo the first version of the GeneNetwork Question Answering system.
+
+%\bigskip
+%\noindent Thank you for reading these instructions carefully. We look forward to receiving your electronic files!
+
+\begin{small}
+\bibliographystyle{aaai}
+\bibliography{refs/scholar, refs/blog, refs/causal, refs/gn}
+\end{small}
+
+\clearpage
+\appendix
+\appendixpage
+\appendixtocname{GeneNetwork.org Q\&A System}
+%\appendixpagename{GeneNetwork.org Q\&A System}
+\section{GeneNetwork.org Q\&A System}
+\input{a1-testqueries}
+
+
+\end{document}

@@ -1,12 +1,12 @@
 
 function all() {
   rm -r *.dvi *.blg *.out *.fls *.fdb* *.aux *.bbl *.synctex ._* *.log *.pdf *.bcf > /dev/null 2>&1
-  rm -rf Figures/*-converted-to* *.run.xml > /dev/null 2>&1
+  rm -rf imgs/*-converted-to* Figures/*-converted-to* *.run.xml > /dev/null 2>&1
 }
 
 function partial() {
     rm -r *.dvi *.blg *.out *.fls *.fdb* *.aux *.bbl *.synctex ._* *.log *.bcf > /dev/null 2>&1
-    rm -rf Figures/*-converted-to* *.run.xml > /dev/null 2>&1
+    rm -rf imgs/*-converted-to* Figures/*-converted-to* *.run.xml > /dev/null 2>&1
 }
 
 function clean() {

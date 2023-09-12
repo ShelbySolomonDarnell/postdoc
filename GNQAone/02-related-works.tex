@@ -1,10 +1,13 @@
 \section{Related Works}
 
-Artificial intelligence is a large research area that includes machine learning, and expert system topics.
-Expert systems have two major components: an inference engine and a knowledge base.
+Artificial intelligence is a large research area that includes machine learning, and expert system topics~\cite{RussellNorvig:2016}.
+Expert systems have two major components: an inference engine and a knowledge base~\cite{Liao:2005,Tan:2017}.
 Machine learning models are best defined by their knowledge base, network architecture, activation function and number of parameters.
 
+\subsection{A Brief Summary of AI in Genomics}
+
 \subsection{Causal Learning}
+In their explanatory reference summary book for causal inference (CI), Pearl and Mackenzie~\cite{Pearl:2018} make the observation that machine learning algorithms and tools can `at best' provide a summary of data and/or transform it without using a model (of the precise problem domain).
 In ML a `model' is an algorithm or set of algorithms trained to recognize a very limited sub-class of pattern.
 It refers to a replica of the environmental and situational conditions that lead to an observable outcome or data at a manageable scale.
 CI describes its usefulness using the `ladder of causation', which has three levels: association, intervention and counterfactuals \cite{Pearl:2018}.
@@ -31,4 +34,6 @@ For instance, data can answer that many people reported feeling relief from cold
 Intervention questions are usually answered using experimentation, while with CI these questions will be answerable using its techniques.
 
 As we found in the summary of deep learning in omics reviews people need to trust the data, algorithms and techniques used for translational medicine, phenotype prediction, precision medicine, advanced therapeutics and more.
-A good way to understand is by asking ``why'', and as Judea Pearl \cite{Pearl:1995} \cite{Pearl:2009} \cite{Pearl:2019} has explained in his multiple works is by using causal inference.
+A good way to understand is by asking ``why'', and as Judea Pearl \cite{Pearl:1995,Pearl:2009,Pearl:2019} has explained in his multiple works is by using causal inference.
+It can argued that without a system being able to answer questions properly that include interventions and counterfactuals, the system can not truely have human level intelligence.
+Computers have for a long time had better `memory' and `memory access speed' than humans, a fact proven by IBM's Watson in 2011~\cite{Ferrucci:2010_watson}; however, even given all of the data in the world, the current LLM based inferencing and optimized search and retrieval does not allow systems to answer counterfactuals and many non-popular intervention queries.

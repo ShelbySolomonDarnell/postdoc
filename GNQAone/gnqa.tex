@@ -32,7 +32,7 @@
 /Title (Insert Your Title Here)
 /Author (Put All Your Authors Here, Separated by Commas)}
 \setcounter{secnumdepth}{0}  
- \begin{document}
+\begin{document}
 % The file aaai.sty is the style file for AAAI Press 
 % proceedings, working notes, and technical reports.
 %
@@ -55,15 +55,26 @@ The department of genetics, genomics and informatics at the University of Tennes
 \end{quote}
 \end{abstract}
 
+% Section 1 - Justification
+\input{01-justification}
+% Section 2 - Overview
 \input{01-intro}
+% Section 3 - Current State of the Art
 \input{02-related-works}
 \input{02a-llm-strengths}
 \input{02b-llm-weaknesses}
+% Section 4 - Innovations
 \input{03-update_expertsystem}
 \input{04-gnqa-dev}
 \input{04a-epochone}
 \input{04b-guix}
 \input{04c-oss-llm}
+% Section 5 - Evaluation
+\input{05-evaluation}
+% Section 6 - Performance
+\input{06-performance}
+% Section 7 - Implications
+\input{07-implications}
 
 \section{ Acknowledgments}
 Many thanks to the Kenyan startup `Fahamu AI' that helped us demo the first version of the GeneNetwork Question Answering system.

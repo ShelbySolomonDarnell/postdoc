@@ -1,4 +1,5 @@
-\begin{table*}[t]
+\begin{table*}[h!]
+  \footnotesize
   \centering
   \begin{tabular}{|p{.2\textwidth}|p{.2\textwidth}|p{.5\textwidth}|}
     \hline
@@ -21,33 +22,10 @@
     \hline 
     \cyan{What are these QTLs?} & \violet{These QTLs are stretches of DNA that are closely linked to genes that underlie a phenotype of interest.} & \brown{\textit{I was hoping for more information about the previous query. I got basically the same response when asking the same question in a different session though, so there is no evidence of contextual memory. I didn’t pursue this further.}} \\
     \hline
-    \cyan{What does QTL mean?} & \violet{[Quantitative trait locus (QTL) is a gene or group of linked genes that influence a quantitative trait.} & \brown{\textit{OK, but weak answer given that this is exactly the sort of situation wher an LLM should shine. Would it perhaps make sense to give the LLM the FAQ data as part of its training?}} \\
+    \cyan{What does QTL mean?} & \violet{Quantitative trait locus (QTL) is a gene or group of linked genes that influence a quantitative trait.} & \brown{\textit{OK, but weak answer given that this is exactly the sort of situation wher an LLM should shine. Would it perhaps make sense to give the LLM the FAQ data as part of its training?}} \\
     \hline
   \end{tabular}
+  \normalsize
   \caption{Biologist System Test part 1}
   \label{tab:rupertsfeedbackp1}
-\end{table*}
-\begin{table*}[t]
-  \centering
-  \begin{tabular}{|p{.2\textwidth}|p{.2\textwidth}|p{.5\textwidth}|}
-    \hline
-    {\Large \textbf{Query text}} & {\Large \textbf{System Response}} & {\Large \textbf{Biologist Comment}} \\
-    \hline
-    \hline
-    \cyan{What is the role of Atf3 in the brain?} & \violet{Atf3 is a transcriptional activator that binds to the cAMP-responsive element (Cre). Interaction with Jun redirects Jun to bind to Cres preferentially over the 12-Otetradecanoylphorbol-13-acetate response elements (Tres) as part of an Atf2-c-Jun complex (487 aa). However, human study did not show strong support for the association between ATF2 and alcoholism. Alcoholism is particularly influenced by the environment.} & \brown{\textit{The response seemed to come only from individual studies rather than being a summary of the field. That may be due to the small post-training dataset at this stage. Is there a 'relevance score' for the papers returned? Several references (and part of the response) were based on Atf2. This is a different gene. Does the system perform grounding to biomedical ontologies? Or is it just looking at text similarity (like Levenshtein distance)?}} \\
-    \hline
-    \cyan{What is the NCBI GeneID four mouse ATf3?} & \violet{The NCBI GeneID for mouse Atf3 is ENSMUSG00000027109.} & \brown{\textit{Close, but no cigar. We got a gene ID for a mouse transcription factor, but that's all. ENSMUSG00000027109 is mouse Sp3.}}    \\
-    \hline
-    \cyan{What is the ENSEMBL GeneID for mouse Atf3?} & \violet{The ENSEMBL GeneID for mouse Atf3 is ENSMUSG00000064371.} & \brown{\textit{Nope, this is mitochondrial tRNA threonine. I wasn’t expecting much from this query as we know this is NOT what LLMs do well. Maybe there could be re-training on the NCBI/Uniprot descriptions and even GeneRIF. I still think there should be a way to directly link entities to databases though.}} \\
-    \hline
-    \cyan{What is the ENSEMBL identifier for Atf3 in mice?} & \violet{The ENSEMBL identifier for Atf3 in mice is ENSMUSG00000027109.} & \brown{\textit{Rephrasing the question gives qualitatively different answers. The citations are all kind of sane though. They actually do get close to Atf3 and the IDs appear to be drawn from these sources. Some explicit grounding would nail this down I think.}} \\
-    \hline
-    \cyan{Where can I find the ENSEMBL identifier for a gene such as Atf3?} & \violet{The ENSEMBL identifier for a gene can be found in the Affymetrix (June 2005 Annotation) and Ensembl AffyProbe (v33) databases.} & \brown{\textit{Hmm - yeeees, you COULD find the identifier there. But that is not where we should be looking. As a comparison, I ran the same query through ChatGPT (3.5):}} \red{\textit{As of my last knowledge update in September 2021, the gene Atf3 is indeed present in the ENSEMBL database, but please note that information might have changed since then. To find the ENSEMBL identifier for the Atf3 gene, you can follow these steps: 
-    1. Visit the ENSEMBL website: Go to the ENSEMBL website at https://www.ensembl.org/. 2. Search for the gene: In the search bar at the top of the page, enter "Atf3" and press Enter or click the magnifying glass icon. 3. Select the gene: From the search results, you should find "Atf3" listed. Click on the gene name to access its detailed information page. 4. Find the ENSEMBL identifier: On the gene's page, you should be able to find the ENSEMBL identifier (also known as the ENSEMBL Gene ID or ENSGID) listed in the gene's summary information or on the "Gene" section of the page. Please note that the specific layout of the ENSEMBL website and the location of information might have changed since my last update. If you're having trouble locating the ENSEMBL identifier or if you want the most up-to-date information, I recommend visiting the ENSEMBL website directly and using their search and navigation tools to find the gene Atf3 and its corresponding ENSEMBL identifier.}} \\
-    \hline
-    \cyan{Where do I look for genes that regulate hippocampal neural stem cell proliferation?} & \violet{In the QTL region.} & \brown{\textit{Obviously :D. I was expecting something more along the lines of the ChatGPT response, that pointed me (in a generic way) to a bunch of sensible resources.}} \\
-    \hline
-  \end{tabular}
-  \caption{Biologist System Test part 2}
-  \label{tab:rupertsfeedbackp2}
 \end{table*}

@@ -1,8 +1,32 @@
-\section{Performance}
+\section{Evaluation \& Performance}
 
-Speak to the qualitative and quantitative shortcomings of the system as it exists.
-Some shortcomings are in the GUI and others have to do with how the model is tuned, and now there are some improvemets our collaborators need to make.
+The system is a complex question and answer system, as defined by \cite{Daull:2023:complex}.
+The performance of such a system needs to be measured quantitatively and qualitatively.
+Qualitative measures such as usability and usefulness seem obvious and not necessary to evaluate, as it is a \gpts\ type of system, where such systems have a question answering functionality and has seen enormous use since its popular debut in late 2022.
+However, the \project\ is an expert system for a very specific domain, which will be modified to be a research companion.
+To this end the normal qualitative performance factors, e.g. the system usability scale \cite{Blattgerste:2022},  must be evaluated for this system and domain.
 
-As the work moves on system performance will be measured by speed of inference, speed of lookup, how answers compare to large non-specilized \llms, usefulness, usability, ease-of-use, and receiver operating characteristic (ROC) curve.
+%Speak to the qualitative and quantitative shortcomings of the system as it exists.
+%Some shortcomings are in the GUI and others have to do with how the model is tuned, and now there are some improvemets our collaborators need to make.
+
+As the work moves on system performance will be measured similarly to \cite{Daull:2023:complex}, by using:
+\begin{itemize}
+    \item speed of inference
+    \item multi-document summarization
+    \item biases reduction
+    \item how answers compare to large non-specilized \llms\
+    \item Usefulness for biologists
+    \item Usefulness for non-biologists
+    \item usability
+    \item ease-of-use
+    \item safety and data sensitivity, truthfulness, veracity and hallucinations
+    \item alignment to human intentions, expectations and values
+     %and receiver operating characteristic (ROC) curve, .
+\end{itemize}
+
+Some performance measures like, speed of inference and multi-document summarizaiton and biases reduction, will not be evaluated, until the same is modified to be different than the model trained with the domain information.
+Based on feedback (table~\ref{tab:rupertsfeedbackp1} and table~\ref{tab:rupertsfeedbackp2}) from a biologist we find the more pertinent perfomance factors include: alignment to human intentions, expectations and values, along with comparison to non-specialized \llms\, and usefulness for biologists.
+
 After obtaining feedback from multiple biologists familiar with \GN\ and its ecosystem a list of questions will be developed that is representative of what a `general' biologist thinks the system should perform well. 
 This list will be tested among multiple system configurations and wth different platforms to come up with false positives, true positives, and other categories that will allow us to use the ROC curve.
+

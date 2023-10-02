@@ -3,7 +3,7 @@
 The system is a complex question and answer system, as defined by \cite{Daull:2023:complex}.
 The performance of such a system needs to be measured quantitatively and qualitatively.
 Qualitative measures such as usability and usefulness seem obvious and not necessary to evaluate, as it is a \gpts\ type of system, where such systems have a question answering functionality and has seen enormous use since its popular debut in late 2022.
-However, the \project\ is an expert system for a very specific domain, which will be modified to be a research companion.
+However, the \project\ is an expert system for a very specific domain, which will act as a research companion.
 To this end the normal qualitative performance factors, e.g. the system usability scale as described by \cite{Blattgerste:2022}, must be evaluated for this system and domain.
 
 %Speak to the qualitative and quantitative shortcomings of the system as it exists.
@@ -24,9 +24,26 @@ As the work moves on system performance will be measured similarly to \cite{Daul
      %and receiver operating characteristic (ROC) curve, .
 \end{itemize}
 
-Some performance measures like, speed of inference and multi-document summarizaiton and biases reduction, will not be evaluated, until the same is modified to be different than the model trained with the domain information.
-Based on feedback (table~\ref{tab:rupertsfeedbackp1} and table~\ref{tab:rupertsfeedbackp2}) from a biologist we find the more pertinent perfomance factors include: alignment to human intentions, expectations and values, along with comparison to non-specialized \llms\, and usefulness for biologists.
+Some performance measures like, speed of inference and multi-document summarizaiton and biases reduction, will not be evaluated, until w begin using an open source model hosted at our institution for training.
+At the moment we are fine-tuning an OpenAI model.
+OpenAI models, as their models have been the main generators of excitement for large language models, will be treated as the default benchmark against which future work will be compared.
+% the same is modified to be different than the model trained with the domain information.
+Based on feedback (table~\ref{tab:rupertsfeedbackp1} and table~\ref{tab:rupertsfeedbackp2}) from a biologist we find the more pertinent performance factors include: alignment to human intentions, expectations and values, along with comparison to non-specialized \llms\, and usefulness for biologists.
+A measure like biases reduction must be properly defined for it to have meaning.
+We build this expert system with a specific community in mind; hence, the biases toward genetics, genomics should be high.
+However, as is commonly found in research, researchers study groups with which they have the most experience, which leads to diversity biases, as the genetics and genomics field is most represented by those of European and East Asian descent.
+Medical research suffers from non-conscious stereotyping and prejudice, a most persistent legacy of slavery and Jim Crow in the United States of America~\cite{Stone:2011}.
+    
 
-After obtaining feedback from multiple biologists familiar with \GN\ and its ecosystem a list of questions will be developed that is representative of what a `general' biologist thinks the system should perform well. 
-This list will be tested among multiple system configurations and wth different platforms to come up with false positives, true positives, and other categories that will allow us to use the ROC curve.
+After obtaining feedback from multiple biologists familiar with \GN\ and its ecosystem a list of questions will be developed that is representative of what a biologist thinks the system should perform well. 
+The same will be turned into a digital survey, similar to work by \cite{Blattgerste:2022} that can be taken from a link on the site when the system is ready for further analysis.
+
+Once we move into phase three for the development of \project\ the question of usefulness will be the most important to answer.
+When functonality is added, it is best to design it to supplement and support the \project\ and not overshadow it.
+\GN\ is a large database that contains data from multiple decades of research that has been used for research experimentation.
+When one asks about a specific experiment of class of experiments, being able to recreate the digital environment that supported the analysis is of paramount importance, and brings us back to the benefits of \guix.
+The \project\ should be able to give instructions and links to data and software, along with instructions on how to recreate a study and links to data, metadata and other findings.
+
+
+%This list will be tested among multiple system configurations and wth different platforms to come up with false positives, true positives, and other categories that will allow us to use the ROC curve.
 

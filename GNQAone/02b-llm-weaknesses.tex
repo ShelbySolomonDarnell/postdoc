@@ -9,12 +9,18 @@ While the model is being trained it learns, and in the case of \gpts\ class mode
 
 Bias perpetuation
 Reconstruct protected data
-Information hallucination
+Information hallucination \cite{OpenAI:2023:gpt4}
 Little to on explainability
 General logic errors
 Susceptibility to prompt injection
 
 \subsection{Mitigating the weaknesses of an open LLM}
+The existing proof of concept utilizes a GPT3.5 fine-tuned system.
+OpenAI has identified several of their technical issues and are implementing corrective measures and/or are allowing the system to improve incrementally as it is used \cite{OpenAI:2023:gpt4}.
+
+In genetics and omics research we must address bias perpetuation with respect to our datasets, and the system implementation and design cannot fix the bias that comes from  decades of creating datasets based on their historic and current prejudice.
+Mitigating the bias can be done thru adding a module that checks experiment meta data to list a demographic summary when returning results including human studies and datasets.
+
 \subsubsection{How much data?}
 ChatGPT was trained on multitudinous data scoured from all over the internet. 
 With this almost indeterminate information grab comes petabytes of information, which required extreme effort to curate.

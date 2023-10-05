@@ -1,20 +1,41 @@
-\subsection{Weaknesses in LLMs}
+\section{Weaknesses in LLMs}
 A major problem with \llms\ is the unproven high level of trust placed in them by excited users.
 A small anecdote referneces a genomics Ph.D. student who told me in early 2023 that ChatGPT is close to `perfect' as it responds in a manner she deems favourable to more than 90\% of her prompts.
 This statement, although from a Ph.D. student was without qualification or data.
 It is likely the use cases to which her prompts belong were in the list of those ChatGPT handles well, and she was possibly not an expert on the subjects with which she prompted the system.
 Data is not referenced when answers are generated.
-LLMs and generative AI have the same issues in that pure fact patterns are not mapped, similarities are mapped and based on the data available.
+LLMs and generative AI have the same issues in that pure fact patterns are not mapped, similarities are mapped and based on the data available \cite{Floridi:2023}.
 While the model is being trained it learns, and in the case of \gpts\ class models learns well, associations and not facts.
 
-Bias perpetuation
-Reconstruct protected data
-Information hallucination \cite{OpenAI:2023:gpt4}
-Little to on explainability
-General logic errors
-Susceptibility to prompt injection
+\subsection{Bias perpetuation}
+Research assumptions and findings are based on the data available, which has been found is often not representative of the data that exists.
+Statistical analysis is utilized in an attempt to find a population sample size that is representative of a problem space, and extrapolate findings based off of equations that scale the findings from the sample to the whole population.
+Unfortunately this is not applicable in all scientific scenarios.
+Say for instance you are developing facial recognition algorithms and you determine a representative sample size for your study is one thousand people for a population size hundred times larger.
+Statistically the sample size may be representative, by the numbers; but if demographic representation is not considered, regardless of the validity of the studies methods, the sample size of nine hundred and ninety faces of those with mainly European ancestry while only having ten of African or Native American ancestry, the facial recognition algorithm will become tuned to best recognize the faces best represented in its sample.
+Biases are present in almost all research datasets, and those who work with these datasets must be aware of its shortcomings, so as to not perpetuate the biases invisibly with further works.
 
-\subsection{Mitigating the weaknesses of an open LLM}
+\subsection{Reconstruct protected data}
+The internet was scoured for training material for the OpenAI \gpts. 
+Hence, upon receiving a prompt to create a narrative along the lines of an existing one, on which the system has trained, the generated content can recreate something copyrighted, patented, or protected in some other legal fashion.
+
+
+\subsection{Information hallucination and Logic errors}
+\llms\ are not yet ready to be relied upon in mission critical situations because they can hallucinate \cite{OpenAI:2023:gpt4}.
+As the populace tests the ChatGPT platform they have put it to the task of generating creative scientific work while referencing its sources.
+Unfortunately, more often than not the \gai\ hallucinates and generates sources rather than citing ones that exist.
+Similarly when faced with a prompt that requires the system to follow logic to craft a useful response, the system still may fail.
+This is not due to poor performance, just the nature of how \llms\ work and use data ingested to generate human readable responses.
+\llms\ are not logic engines, they are learning engines that mimic human language using big data.
+
+ 
+\subsection{Little to no explainability}
+Given that \gpts\ are \llms\ wit billions of parameters, attempting to understand the models reasoning is close to an impossibility.
+In the field of explainable AI, tchniques exist to support neural network explainability; however, they do not scale well to neural networks with billions of parameters.
+
+\subsection{Susceptibility to prompt injection}
+
+\section{Mitigating the weaknesses of an open LLM}
 The existing proof of concept utilizes a GPT3.5 fine-tuned system.
 OpenAI has identified several of their technical issues and are implementing corrective measures and/or are allowing the system to improve incrementally as it is used \cite{OpenAI:2023:gpt4}.
 

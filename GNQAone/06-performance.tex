@@ -27,12 +27,34 @@ As the work moves on system performance will be measured similarly to \cite{Daul
 Some performance measures like, speed of inference and multi-document summarizaiton and biases reduction, will not be evaluated, until w begin using an open source model hosted at our institution for training.
 At the moment we are fine-tuning an OpenAI model.
 OpenAI models, as their models have been the main generators of excitement for large language models, will be treated as the default benchmark against which future work will be compared.
+
+Our proof-of-concept system has been tested by a subject matter expert, and his comments on the system's ability to answer questions in fine-tuned domain show us several improvement areas, including: knowledge of specific genes, the answer being pulled from a single source, concerns with hallucination, the breadth of a summary given the references from which it is said to come, retaining a working knowledge of previous queries, responses not as strong as from its foundation model and general core knowledge of research area.
+
+Some of the biologists comments that question the systems knowledge follow: 
+\begin{quotation}
+\cyan{What is the most recent paper published using the BXD population?}
+
+\textbf{The most recent paper published using the BXD population is from 2018. The most recent paper published using the BXD population is from 2019.} 
+
+\textit{I am assuming the two different responses (some days apart) are because the database of papers is being actively expanded. I can’t actually verify the LLMs statement as the citation information is not exposed yet (just a hash). The top hit quotes from David’s ‘expanded BXD family’ paper from 2019, so it seems OK. Not sure why there is more than one hit for this query though (is the LLM actually collecting dates and finding the max? Or is it just making up text?)}
+
+\cyan{How many strains are available for the BXD population?}
+
+\textbf{There are a totoal of 123 BXD strains available.} 
+
+\textit{I have received some different values, but all under the 150 quoted in David's 2019 paper (which we know from above is in the reading list).}
+\end{quotation}
+
+\llms\ are known to have problems with answering questions like `What is the time?', when there is no `oracle/expert' present to provide the precise value.
+The disappointment with the system not being completely correct on specific facts that may be found in the uploaded literature is understandable and fixable with up-to-date information and an `oracle/expert' that can provide the answer.
+
 % the same is modified to be different than the model trained with the domain information.
 Based on feedback (table~\ref{tab:rupertsfeedbackp1} and table~\ref{tab:rupertsfeedbackp2}) from a biologist we find the more pertinent performance factors include: alignment to human intentions, expectations and values, along with comparison to non-specialized \llms\, and usefulness for biologists.
 A measure like biases reduction must be properly defined for it to have meaning.
 We build this expert system with a specific community in mind; hence, the biases toward genetics, genomics should be high.
 However, as is commonly found in research, researchers study groups with which they have the most experience, which leads to diversity biases, as the genetics and genomics field is most represented by those of European and East Asian descent.
 Medical research suffers from non-conscious stereotyping and prejudice, a most persistent legacy of slavery and Jim Crow in the United States of America~\cite{Stone:2011}.
+Hence, for this system we must provide a caveat to users that speaks to the history of medical research, and then present facts on which the system will be fine-tuned.
     
 
 After obtaining feedback from multiple biologists familiar with \GN\ and its ecosystem a list of questions will be developed that is representative of what a biologist thinks the system should perform well. 

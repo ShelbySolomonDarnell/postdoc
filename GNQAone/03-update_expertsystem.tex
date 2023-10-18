@@ -12,6 +12,7 @@ Because perfect inference is not possible even when deduced by models with billi
 An expert system requires an inference engine and a knowledge base.
 Modern LLms provide the inference engine, while the knowledge based can be curated, and finally the process must be moderated such that LLM hallucination can not interfere with the results; because what use is an expert system that will not tell you the truth?
 
+We follow a path similar to \cite{Karpas:2022:mrkl} at AI21, who have developed the Modular Reasoning, Knowledge and Language (MRKL) system, another LLM based chat and question answering system that uses `experts' to ensure the retrieval of factual information.
 Software oracles are the different experts to whom you can ask questions in an expert system.
 The system as it exists only relies on the documents on which it is trained to answer questions; however, being confined to just this is not close to being suitable for our use case.
 Our use case being a system that is an overall expert concerning genetic and genomics research on rats and mice in the \GN\ database and ecosystem.

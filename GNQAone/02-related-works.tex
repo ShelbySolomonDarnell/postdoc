@@ -10,7 +10,11 @@ Late 2022 saw an introduction to \llms\ that got the notice of the entire world 
 OpenAI debuted ChatGPT an `ask me anything' system that seemed to be the logical extension of good `search' and excellent `prompt' support, in the veins of an incredibly improved `Alexa' (by Amazon), `Siri' (by Apple) or `Cortana' (by Microsoft).
 While these voice activated assistants seem `intelligent', they are programmed in a fashion that allows them to support very specific and directly encoded tasks, such as controlling `smart' devices (e.g. thermostats, lights, alarms, locks, speakers and televisions) \cite{Hoy:2018}.
 
-Google Bard, Bing Chat, Dolly by Databricks, and Llama by Meta are `big techs' answer to the previously rogue startup `OpenAI' (as Microsoft has recently invested heavily \cite{Browne:2023} ).
+Google Bard \cite{GoogleBard:2023}, Bing Chat \cite{BingChat:2023}, Dolly by Databricks \cite{Dolly:2023}, and Llama by Meta \cite{Llama:2023,Llama2:2023} are `big techs' answer to the previously rogue startup `OpenAI', as Microsoft has recently invested heavily \cite{Browne:2023}.
+Many of the weights of the models are kept under wraps by their owners; however, Databricks and Meta have open-sourced their models, allowing people all over the world to experiment and extend a high quality LLM democratizing the technology.
+OpenAI allows for a paid account to fine-tune their models for specific use-cases, but it has not open-sourced the model to enable others to run a full OpenAI \gpts\ model for themselves.
+We will build and test using the open-source \llms.
+
 
 \subsection{Causal Learning}
 In their explanatory reference summary book for causal inference (CI), Pearl and Mackenzie~\cite{Pearl:2018} make the observation that machine learning algorithms and tools can `at best' provide a summary of data and/or transform it without using a model (of the precise problem domain).
@@ -43,3 +47,4 @@ As we found in the summary of deep learning in omics reviews people need to trus
 A good way to understand is by asking ``why'', and as Judea Pearl \cite{Pearl:1995,Pearl:2009,Pearl:2019} has explained in his multiple works is by using causal inference.
 It can argued that without a system being able to answer questions properly that include interventions and counterfactuals, the system can not truely have human level intelligence.
 Computers have for a long time had better `memory' and `memory access speed' than humans, a fact proven by IBM's Watson in 2011~\cite{Ferrucci:2010_watson}; however, even given all of the data in the world, the current LLM based inferencing and optimized search and retrieval does not allow systems to answer counterfactuals and many non-popular intervention queries.
+Therefore, in order to push \llms\ to an even more impressive path of meaning generation and inference is by including causal reasoning into the training or fine-tuning of huge foundation models.
